@@ -15,7 +15,7 @@ const element = {
 function createElement(element, reference){
     
     try{
-        if( element.tag.length === 0){
+        if(element.tag.length === 0){
             throw console.log("Admin message: Nenhuma tag HTML foi definida \n")
         }
 
@@ -41,6 +41,7 @@ function createElement(element, reference){
         reference.appendChild(newElement)
     }
     catch(e){
+        console.log("este elemento DOM nao existe")
         console.log(e)
     }
 }
@@ -97,7 +98,7 @@ function main(){
 
         let getLastLabelEl =  document.getElementsByTagName("label").length-1
         let labelEl = document.getElementsByTagName("label")[getLastLabelEl]
-
+ 
         let getLastDivEl = document.getElementsByClassName("tasks").length-1
         let divTaskEl = document.getElementsByClassName("tasks")[getLastDivEl]
 
